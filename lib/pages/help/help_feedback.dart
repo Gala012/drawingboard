@@ -24,7 +24,7 @@ class HelpFeedback extends GetView<HandelLogic> {
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.wvcamr.value)),
+              url: WebUri.uri(Uri.parse(controller.wqkforcd.value)),
             ),
             initialSettings: InAppWebViewSettings(
               cacheEnabled: true,

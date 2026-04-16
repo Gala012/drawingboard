@@ -11,8 +11,8 @@ class HandelView extends GetView<HandelLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.gesimbf.value
-              ? const CircularProgressIndicator(color: Colors.blueAccent)
+          () => controller.tchni.value
+              ? const CircularProgressIndicator(color: Colors.white)
               : buildError(),
         ),
       ),
@@ -26,7 +26,7 @@ class HandelView extends GetView<HandelLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.ociltz();
+              controller.xlnkpruo();
             },
             icon: const Icon(
               Icons.restart_alt,

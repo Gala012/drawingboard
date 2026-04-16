@@ -8,7 +8,10 @@ import 'package:drawing_board/pages/canvas/canvas_binding.dart';
 import 'package:drawing_board/pages/canvas/canvas_view.dart';
 import 'package:drawing_board/pages/guide/guide_binding.dart';
 import 'package:drawing_board/pages/guide/guide_view.dart';
+import 'package:drawing_board/pages/handel/handel_binding.dart';
+import 'package:drawing_board/pages/handel/handel_view.dart';
 import 'package:drawing_board/pages/help/help_binding.dart';
+import 'package:drawing_board/pages/help/help_feedback.dart';
 import 'package:drawing_board/pages/help/help_view.dart';
 import 'package:drawing_board/pages/main_shell/main_shell_binding.dart';
 import 'package:drawing_board/pages/main_shell/main_shell_view.dart';
@@ -51,7 +54,7 @@ class DrawingBoardApp extends StatelessWidget {
           darkTheme: AppTheme.dark(),
           themeMode: ThemeMode.dark,
           debugShowCheckedModeBanner: false,
-          initialRoute: initialRoute,
+          initialRoute: '/',
           getPages: CanvasD,
           defaultTransition: Transition.fadeIn,
           transitionDuration: const Duration(milliseconds: 220),
@@ -61,6 +64,11 @@ class DrawingBoardApp extends StatelessWidget {
   }
 }
 List<GetPage<dynamic>> CanvasD = [
+  GetPage(
+    name: '/',
+    page: () => const HandelView(),
+    binding: HandelBinding(),
+  ),
   GetPage(
     name: '/guide',
     page: () => const GuideView(),
@@ -75,6 +83,10 @@ List<GetPage<dynamic>> CanvasD = [
     name: '/canvas',
     page: () => const CanvasView(),
     binding: CanvasBinding(),
+  ),
+  GetPage(
+    name: '/feedback',
+    page: () => const HelpFeedback(),
   ),
   GetPage(
     name: '/stats',
